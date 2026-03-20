@@ -1,0 +1,168 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, #0f172a, #020617 55%);
+  padding: 32px 20px 40px;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 40px 48px 56px;
+  }
+}
+
+.header {
+  max-width: 960px;
+  margin: 0 auto 24px;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 6px;
+}
+
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 2.1rem;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+@media (min-width: 900px) {
+  .content {
+    grid-template-columns: minmax(0, 2fr);
+  }
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (min-width: 768px) {
+  .kpi-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.kpi-card {
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), #020617);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  padding: 12px 14px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+}
+
+.kpi-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.kpi-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.kpi-change {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.kpi-change-up {
+  color: #22c55e;
+}
+
+.kpi-change-down {
+  color: #f97316;
+}
+
+.kpi-caption {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.chart-card {
+  margin-top: 6px;
+  border-radius: 16px;
+  padding: 16px 16px 18px;
+  background: radial-gradient(circle at top left, #0b1120, #020617 65%);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.85);
+}
+
+.chart-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.chart-header h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.chart-subtitle {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.chart {
+  width: 100%;
+  display: block;
+}
+
+.chart-dot {
+  fill: #22c55e;
+  stroke: #020617;
+  stroke-width: 1.4;
+}
+
+.chart-label {
+  fill: #e5e7eb;
+  font-size: 0.78rem;
+}
+
+.chart-label-muted {
+  fill: #6b7280;
+  font-size: 0.7rem;
+}
